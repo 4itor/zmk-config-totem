@@ -45,6 +45,29 @@
         };
     };
 
+    macros {
+        m_updir: m_updir {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp DOT &kp SLASH>;
+            label = "M_UPDIR";
+        };
+
+        m_assign: m_assign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp EQUAL>;
+            label = "M_ASSIGN";
+        };
+
+        m_add: m_add {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS &kp EQUAL>;
+            label = "M_ADD";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -91,10 +114,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC   &trans    &kp LC(LA(F1))    &kp LA(LS(F))  &kp LEFT_PARENTHESIS    &kp RPAR    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-        &kp LGUI  &kp LALT  &kp LEFT_CONTROL  &kp LSHFT      &kp KP_PLUS             &kp PERIOD  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
-&trans  &trans    &trans    &trans            &trans         &kp KP_MINUS            &kp COMMA   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
-                            &trans            &trans         &trans                  &trans      &trans        &trans
+         &kp ESC   &none     &kp LC(LA(F1))    &kp LA(LS(F))  &kp LEFT_PARENTHESIS    &kp RPAR    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+         &kp LGUI  &kp LALT  &kp LEFT_CONTROL  &kp LSHFT      &kp KP_PLUS             &kp PERIOD  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SEMI
+&kp ESC  &none     &none     &none             &none          &kp KP_MINUS            &kp COMMA   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH     &kp N0
+                             &trans            &trans         &trans                  &trans      &trans        &trans
             >;
         };
 
@@ -115,10 +138,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL          &kp AT       &kp HASH   &kp DLLR  &kp PRCNT        &kp CARET     &kp AMPS        &kp ASTRK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-        &kp RA(NUMBER_1)  &trans       &kp RA(S)  &trans    &trans           &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp LEFT_BRACE        &kp RIGHT_BRACE
-&trans  &trans            &kp RA(F19)  &trans     &trans    &trans           &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
-                                       &trans     &kp TAB   &kp BACKSPACE    &kp SPACE     &kp ENTER       &trans
+          &kp EXCL          &kp AT     &kp HASH   &kp DLLR   &kp PRCNT        &kp CARET  &kp AMPS           &kp ASTRK         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+          &kp RA(NUMBER_1)  &kp TILDE  &kp MINUS  &kp PLUS   &kp PIPE         &kp GRAVE  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp LEFT_BRACE        &kp RIGHT_BRACE
+&kp EXCL  &none             &m_updir   &kp UNDER  &kp EQUAL  &kp BACKSLASH    &none      &m_assign          &m_add            &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
+                                       &trans     &kp TAB    &kp BACKSPACE    &kp SPACE  &kp ENTER          &trans
             >;
         };
 
