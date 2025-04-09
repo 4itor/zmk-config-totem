@@ -162,10 +162,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp TAB    &kp I      &kp LC(LALT)  &kp O        &kp LC(F20)    &none  &none  &none  &none  &none
-       &lt 0 L    &kp LEFT   &kp LALT      &kp RIGHT    &kp SPACE      &none  &none  &none  &none  &none
-&kp J  &kp LSHFT  &kp LC(C)  &kp BSPC      &kp LC(V)    &kp LC(F19)    &none  &none  &none  &none  &none  &none
-                             &trans        &kp LC(F14)  &kp LC(F13)    &none  &none  &none
+       &kp RA(SEMICOLON)  &kp RA(GRAVE)  &kp RA(SQT)  &kp RA(NUMBER_6)           &none               &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &none
+       &kp LGUI           &kp LALT       &kp LCTRL    &kp LSHFT                  &kp RA(NUMBER_1)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none
+&kp J  &none              &none          &kp RA(C)    &none                      &kp RA(SLASH)       &none     &none          &none         &none      &none  &none
+                                         &trans       &kp LC(LS(LA(LG(SPACE))))  &kp LC(DEL)         &none     &none          &none
             >;
         };
 
