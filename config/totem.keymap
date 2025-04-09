@@ -65,6 +65,14 @@
             bindings = <&kp PLUS &kp EQUAL>;
             label = "M_ADD";
         };
+
+        m_license: m_license {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(H) &kp L>, <&macro_wait_time 500>, <&kp LA(C)>;
+
+            label = "M_LICENSE";
+        };
     };
 
     keymap {
@@ -139,8 +147,8 @@
             bindings = <
           &kp EXCL          &kp AT     &kp HASH   &kp DLLR   &kp PRCNT        &kp CARET  &kp AMPS           &kp ASTRK         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
           &kp RA(NUMBER_1)  &kp TILDE  &kp MINUS  &kp PLUS   &kp PIPE         &kp GRAVE  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp LEFT_BRACE        &kp RIGHT_BRACE
-&kp EXCL  &none             &m_updir   &kp UNDER  &kp EQUAL  &kp BACKSLASH    &none      &m_assign          &m_add            &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
-                                       &trans     &kp TAB    &kp BACKSPACE    &kp SPACE  &kp ENTER          &trans
+&kp EXCL  &none             &m_updir   &kp UNDER  &kp EQUAL  &kp BACKSLASH    &none      &m_assign          &m_add            &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
+                                       &trans     &trans     &trans           &trans     &trans             &trans
             >;
         };
 
@@ -161,10 +169,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp RA(SEMICOLON)  &kp RA(GRAVE)  &kp RA(SQT)  &kp RA(NUMBER_6)           &none               &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &none
-       &kp LGUI           &kp LALT       &kp LCTRL    &kp LSHFT                  &kp RA(NUMBER_1)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none
-&kp J  &none              &none          &kp RA(C)    &none                      &kp RA(SLASH)       &none     &none          &none         &none      &none  &none
-                                         &trans       &kp LC(LS(LA(LG(SPACE))))  &kp LC(DEL)         &none     &none          &none
+       &kp RA(SEMICOLON)      &kp RA(GRAVE)  &kp RA(SQT)  &kp RA(NUMBER_6)           &kp RS(RA(SQT))     &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &none
+       &kp LGUI               &kp LALT       &kp LCTRL    &kp LSHFT                  &kp RA(NUMBER_1)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none
+&kp J  &kp RS(RA(SEMICOLON))  &kp RS(RA(C))  &kp RA(C)    &kp LS(LA(GRAVE))          &kp RA(SLASH)       &none     &none          &none         &none      &none  &none
+                                             &trans       &kp LC(LS(LA(LG(SPACE))))  &kp LC(DEL)         &trans    &trans         &trans
             >;
         };
 
@@ -185,10 +193,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LG(Q)  &kp LG(W)   &none   &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
-        &kp LGUI   &kp LALT    &trans  &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans     &bt BT_PRV  &trans  &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                               &trans  &trans  &trans    &trans  &trans  &trans
+        &kp LG(Q)   &kp LG(W)  &kp LA(LS(TAB))  &kp LA(TAB)     &kp F12          &none      &kp F7  &kp F8  &kp F9  &kp F12
+        &kp LGUI    &kp LALT   &kp LCTRL        &kp LEFT_SHIFT  &kp LA(LEFT)     &none      &kp F4  &kp F5  &kp F6  &kp F11
+&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY       &kp K_PASTE     &kp LA(RIGHT)    &none      &kp F1  &kp F2  &kp F3  &kp F10  &none
+                               &trans           &trans          &trans           &kp LA(S)  &trans  &trans
             >;
         };
 
@@ -209,10 +217,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LC(F18)  &kp LS(I)     &kp LS(HOME)  &kp LS(O)      &kp LS(F)      &trans  &kp F7  &kp F8  &kp F9  &kp F12
-        &trans       &kp LS(LEFT)  &kp LC(F17)   &kp LS(RIGHT)  &kp RET        &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &kp J        &kp LS(C)     &kp LC(F16)   &kp LS(V)      &kp LC(F15)    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                                   &trans        &kp LC(F12)    &kp LC(F11)    &trans  &trans  &trans
+        &kp LC(LA(LS(LG(Q))))  &none                  &kp LC(MINUS)  &kp LC(EQUAL)  &kp LC(N0)      &kp C_PLAY        &kp C_PREV            &kp C_NEXT            &kp RG(NUMBER_4)            &kp RG(N5)
+        &kp LS(LG(LA(LC(A))))  &kp LS(LA(LG(LC(S))))  &none          &none          &none           &kp C_MUTE        &kp C_VOL_DN          &kp C_VOLUME_UP       &m_license                  &kp LS(LG(LC(LA(SEMICOLON))))
+&trans  &bt BT_CLR             &none                  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &kp RG(NUMBER_6)  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LS(LA(LC(LG(PERIOD))))  &kp LA(LC(DEL))                &none
+                                                      &trans         &trans         &trans          &trans            &trans                &trans
             >;
         };
     };
