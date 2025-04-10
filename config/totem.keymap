@@ -42,6 +42,21 @@
             bindings = <&kp ESCAPE>;
             key-positions = <2 3>;
         };
+
+        combo_meet_mute {
+            bindings = <&kp LC(D)>;
+            key-positions = <27 28>;
+        };
+
+        combo_meet_cam {
+            bindings = <&kp LC(E)>;
+            key-positions = <28 29>;
+        };
+
+        combo_caps_word {
+            bindings = <&caps_word>;
+            key-positions = <13 16>;
+        };
     };
 
     macros {
