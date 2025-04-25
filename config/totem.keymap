@@ -233,7 +233,7 @@
 
             bindings = <
         &kp LC(LA(LS(LG(Q))))  &none                  &kp LC(MINUS)  &kp LC(EQUAL)  &kp LC(N0)      &kp C_PLAY        &kp C_PREV            &kp C_NEXT            &kp RG(NUMBER_4)            &kp RG(N5)
-        &kp LS(LG(LA(LC(A))))  &kp LS(LA(LG(LC(S))))  &none          &none          &none           &kp C_MUTE        &kp C_VOL_DN          &kp C_VOLUME_UP       &m_license                  &kp LS(LG(LC(LA(SEMICOLON))))
+        &kp LS(LG(LA(LC(A))))  &kp LS(LA(LG(LC(S))))  &none          &bt BT_SEL 3   &bt BT_SEL 4    &kp C_MUTE        &kp C_VOL_DN          &kp C_VOLUME_UP       &m_license                  &kp LS(LG(LC(LA(SEMICOLON))))
 &trans  &bt BT_CLR             &none                  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &kp RG(NUMBER_6)  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LS(LA(LC(LG(PERIOD))))  &kp LA(LC(DEL))                &none
                                                       &trans         &trans         &trans          &trans            &trans                &trans
             >;
