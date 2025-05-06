@@ -128,7 +128,7 @@
         m_lock: m_lock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(L)>;
+            bindings = <&kp LG(LC(Q))>;
             label = "M_LOCK";
         };
     };
@@ -251,10 +251,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LG(Q)  &kp LG(W)  &kp LA(LS(TAB))  &kp LA(TAB)     &kp F12          &none      &kp F7  &kp F8  &kp F9  &kp F10
-        &kp LGUI   &kp LALT   &kp LCTRL        &kp LEFT_SHIFT  &kp LA(LEFT)     &none      &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)        &kp LC(V)       &kp LA(RIGHT)    &none      &kp F1  &kp F2  &kp F3  &kp F12  &none
-                              &trans           &trans          &trans           &kp LA(S)  &trans  &trans
+           &kp LG(Q)  &kp LG(W)  &kp LA(LS(TAB))  &kp LA(TAB)     &kp F12          &none      &kp F7  &kp F8  &kp F9  &kp F10
+           &kp LGUI   &kp LALT   &kp LCTRL        &kp LEFT_SHIFT  &kp LA(LEFT)     &none      &kp F4  &kp F5  &kp F6  &kp F11
+&m_select  &m_undo    &m_cut     &m_copy          &m_paste        &kp LA(RIGHT)    &none      &kp F1  &kp F2  &kp F3  &kp F12  &none
+                                 &trans           &trans          &trans           &kp LA(S)  &trans  &trans
             >;
         };
 
