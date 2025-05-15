@@ -292,17 +292,6 @@
 
             label = "CON";
         };
-
-        Extra {
-            bindings = <
-       &none  &none  &none  &none  &none    &none   &none   &none  &none  &none
-       &none  &none  &none  &none  &none    &none   &none   &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none   &none   &none  &none  &none  &none
-                     &none  &none  &none    &trans  &trans  &none
-            >;
-
-            label = "XTR";
-        };
     };
 
     conditional_layers {
@@ -316,11 +305,6 @@
         Connectivity_Layer {
             if-layers = <1 4>;
             then-layer = <6>;
-        };
-
-        Extra_Layer {
-            if-layers = <2 3>;
-            then-layer = <7>;
         };
     };
 };
