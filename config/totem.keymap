@@ -142,6 +142,12 @@
             key-positions = <30 31>;
             layers = <6>;
         };
+
+        combo_gaming_exit {
+            bindings = <&to 0>;
+            key-positions = <30 31>;
+            layers = <8>;
+        };
     };
 
     keymap {
