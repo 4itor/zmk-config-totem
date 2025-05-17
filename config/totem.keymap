@@ -22,13 +22,6 @@
 #define TVP1 4
 #define TVP2 5
 
-&mt {
-    quick-tap-ms = <0>;
-    global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-};
-
 / {
     behaviors {
         ht: hold_tap {
@@ -157,6 +150,63 @@
             bindings = <&to 0>;
             key-positions = <30 31>;
             layers = <12>;
+        };
+
+        combo_cut_win {
+            bindings = <&kp LC(X)>;
+            key-positions = <21 22>;
+            layers = <0>;
+        };
+
+        combo_copy_win {
+            bindings = <&kp LC(C)>;
+            key-positions = <22 23>;
+            layers = <0>;
+        };
+
+        combo_paste_win {
+            bindings = <&kp LC(V)>;
+            key-positions = <23 24>;
+        };
+
+        combo_select_all_win {
+            bindings = <&kp LC(A)>;
+            key-positions = <25 24>;
+            layers = <0>;
+        };
+
+        combo_cut_mac {
+            bindings = <&kp LG(X)>;
+            key-positions = <21 22>;
+            layers = <1>;
+        };
+
+        combo_copy_mac {
+            bindings = <&kp LG(C)>;
+            key-positions = <23 22>;
+            layers = <1>;
+        };
+
+        combo_paste_mac {
+            bindings = <&kp LG(V)>;
+            key-positions = <24 23>;
+            layers = <1>;
+        };
+
+        combo_select_all_mac {
+            bindings = <&kp LG(A)>;
+            key-positions = <24 25>;
+            layers = <1>;
+        };
+
+        combo_win_switch {
+            bindings = <&to 0>;
+            key-positions = <20 21>;
+        };
+
+        combo_mac_switch {
+            bindings = <&to 1>;
+            key-positions = <31 30>;
         };
     };
 
@@ -333,10 +383,10 @@
         Mac_Adjust {
             label = "Adjust";
             bindings = <
-        &none                 &none           &kp LG(MINUS)   &kp LG(EQUAL)  &kp LG(N0)    &kp C_PLAY        &kp C_PREV            &kp C_NEXT            &kp RG(NUMBER_4)            &kp RG(N5)
-        &kp LS(LG(NUMBER_3))  &kp LS(LG(N4))  &kp LG(LS(N5))  &none          &none         &kp C_MUTE        &kp C_VOL_DN          &kp C_VOLUME_UP       &m_license                  &kp LS(LG(LC(LA(SEMICOLON))))
-&trans  &none                 &none           &none           &none          &none         &kp RG(NUMBER_6)  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LS(LA(LC(LG(PERIOD))))  &kp LA(LC(DEL))                &none
-                                              &trans          &trans         &trans        &trans            &trans                &trans
+        &none                 &none           &kp LG(MINUS)   &kp LG(EQUAL)  &kp LG(N0)    &kp C_PLAY  &kp C_PREV            &kp C_NEXT            &none          &none
+        &kp LS(LG(NUMBER_3))  &kp LS(LG(N4))  &kp LG(LS(N5))  &none          &none         &kp C_MUTE  &kp C_VOL_DN          &kp C_VOLUME_UP       &kp LC(LG(Q))  &none
+&trans  &none                 &none           &none           &none          &none         &none       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none          &none  &none
+                                              &trans          &trans         &trans        &trans      &trans                &trans
             >;
         };
 
