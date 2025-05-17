@@ -355,7 +355,7 @@
 
         GNumpad {
             label = "GNumpad";
-            display_name "Gaming!";
+            display_name = "Gaming!";
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
