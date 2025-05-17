@@ -239,7 +239,7 @@
 
         MacOS {
             label = "MacOS";
-            display_name = "Mac OS";
+            display-name = "Mac OS";
             bindings = <
        &kp Q       &kp W       &kp E        &kp R        &kp T              &kp Y        &kp U        &kp I        &kp O       &kp P
        &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G              &kp H        &mt RSHFT J  &mt RCTRL K  &mt LALT L  &mt RGUI SEMI
@@ -249,7 +249,7 @@
         };
 
         Numpad {
-            display_name = "Numpad";
+            display-name = "Numpad";
             bindings = <
          &kp ESC   &none     &kp LC(LA(F1))    &kp LA(LS(F))  &kp LEFT_PARENTHESIS    &kp RPAR    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
          &kp LGUI  &kp LALT  &kp LEFT_CONTROL  &kp LSHFT      &kp KP_PLUS             &kp PERIOD  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SEMI
@@ -280,7 +280,7 @@
 
         Navigation {
             label = "Navigate";
-            display_name = "Navigate";
+            display-name = "Navigate";
             bindings = <
        &kp RA(SEMICOLON)      &kp RA(GRAVE)  &kp RA(SQT)  &kp RA(NUMBER_6)       &kp RS(RA(SQT))     &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &none
        &kp LGUI               &kp LALT       &kp LCTRL    &kp LSHFT              &kp RA(NUMBER_1)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none
@@ -290,7 +290,7 @@
         };
 
         FKeys {
-            display_name = "F.Keys";
+            display-name = "F.Keys";
             bindings = <
        &kp LG(Q)  &kp LG(W)  &kp LS(TAB)  &swap           &tabswap     &none   &kp F7  &kp F8  &kp F9   &kp F10
        &kp LGUI   &kp LALT   &kp LCTRL    &kp LEFT_SHIFT  &none        &none   &kp F4  &kp F5  &kp F6   &kp F11
@@ -301,7 +301,7 @@
 
         Mac_Fkeys {
             label = "FKeys";
-            display_name = "F.Keys";
+            display-name = "F.Keys";
             bindings = <
        &kp LG(Q)  &kp LG(W)  &kp LS(TAB)  &swap           &tabswap     &none   &kp F7  &kp F8  &kp F9  &kp F10
        &kp LGUI   &kp LALT   &kp LCTRL    &kp LEFT_SHIFT  &none        &none   &kp F4  &kp F5  &kp F6  &kp F11
@@ -311,7 +311,7 @@
         };
 
         Adjust {
-            display_name = "Adjust";
+            display-name = "Adjust";
             bindings = <
         &kp LC(LA(LS(LG(Q))))  &none                  &kp LC(MINUS)          &kp LC(EQUAL)          &kp LC(N0)               &kp C_PLAY        &kp C_PREV            &kp C_NEXT            &kp RG(NUMBER_4)            &kp RG(N5)
         &kp LS(LG(LA(LC(A))))  &kp LS(LA(LG(LC(S))))  &kp LG(LA(LS(LC(D))))  &kp LS(LC(LG(LA(F))))  &kp LS(LA(LC(LG(G))))    &kp C_MUTE        &kp C_VOL_DN          &kp C_VOLUME_UP       &m_license                  &kp LS(LG(LC(LA(SEMICOLON))))
@@ -322,7 +322,7 @@
 
         Mac_Adjust {
             label = "Adjust";
-            display_name = "Adjust";
+            display-name = "Adjust";
             bindings = <
         &none                 &none           &kp LG(MINUS)   &kp LG(EQUAL)  &kp LG(N0)    &kp C_PLAY  &kp C_PREV            &kp C_NEXT            &none          &none
         &kp LS(LG(NUMBER_3))  &kp LS(LG(N4))  &kp LG(LS(N5))  &none          &none         &kp C_MUTE  &kp C_VOL_DN          &kp C_VOLUME_UP       &kp LC(LG(Q))  &none
@@ -333,7 +333,7 @@
 
         Connectivity {
             label = "Connect";
-            display_name = "Connect";
+            display-name = "Connect";
             bindings = <
        &bootloader  &none  &none  &none   &out OUT_TOG      &bt BT_CLR    &none         &none         &none         &bootloader
        &none        &none  &none  &none   &none             &none         &none         &none         &none         &none
@@ -344,7 +344,7 @@
 
         Gaming {
             label = "Gaming";
-            display_name = "Gaming";
+            display-name = "Gaming";
             bindings = <
          &kp TAB    &kp Q  &kp E   &kp R   &kp T        &kp Y     &kp U     &kp I     &kp O  &kp P
          &kp LSHFT  &kp A  &kp W   &kp D   &kp F        &kp G     &kp H     &kp J     &kp K  &kp L
@@ -355,7 +355,7 @@
 
         GNumpad {
             label = "GNumpad";
-            display_name = "Gaming!";
+            display-name = "Gaming!";
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
