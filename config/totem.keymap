@@ -103,6 +103,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(H) &kp L>, <&macro_wait_time 500>, <&kp LA(C)>;
+
             label = "M_LICENSE";
         };
     };
@@ -135,6 +136,12 @@
             bindings = <&caps_word>;
             key-positions = <13 16>;
         };
+
+        combo_gaming {
+            bindings = <&to 7>;
+            key-positions = <30 31>;
+            layers = <6>;
+        };
     };
 
     keymap {
@@ -142,10 +149,10 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        Base {
+        MacOS {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "BASE";
+            label = "MacOS";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -169,7 +176,7 @@
         Numpad {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "NUM";
+            label = "Numpad";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -255,10 +262,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp LG(Q)  &kp LG(W)  &kp LS(TAB)  &swap     &tabswap          &none      &kp F7  &kp F8  &kp F9  &kp F10
-           &kp LGUI   &kp LALT   &kp LCTRL        &kp LEFT_SHIFT  &kp LA(LEFT)     &none      &kp F4  &kp F5  &kp F6  &kp F11
-           &kp LG(Z)  &kp LG(X)  &kp LG(C)        &kp LG(V)       &kp LA(RIGHT)    &none      &kp F1  &kp F2  &kp F3  &kp F12  &none
-                                 &trans           &trans          &trans           &kp LA(S)  &trans  &trans
+           &kp LG(Q)  &kp LG(W)  &kp LS(TAB)  &swap           &tabswap        &none   &kp F7  &kp F8  &kp F9   &kp F10
+           &kp LGUI   &kp LALT   &kp LCTRL    &kp LEFT_SHIFT  &kp LA(LEFT)    &none   &kp F4  &kp F5  &kp F6   &kp F11
+&kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)    &kp LA(RIGHT)   &none           &kp F1  &kp F2  &kp F3  &kp F12  &none    &trans
+                                 &trans       &trans          &trans          &trans  &trans
             >;
         };
 
@@ -295,6 +302,28 @@
             >;
 
             label = "CON";
+        };
+
+        Gaming {
+            bindings = <
+         &kp TAB    &kp Q  &kp E   &kp R  &kp T        &kp Y     &kp U     &kp I     &kp O  &kp P
+         &kp LSHFT  &kp A  &kp W   &kp D  &kp F        &kp G     &kp H     &kp J     &kp K  &kp L
+&kp ESC  &kp LALT   &kp Z  &kp S   &kp X  &kp C        &kp V     &kp B     &kp N     &kp M  &kp COMMA  &kp DOT
+                           &trans  &mo 8  &kp SPACE    &kp FSLH  &kp SEMI  &kp APOS
+            >;
+
+            label = "Gaming";
+        };
+
+        GNumpad {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "GNumpad";
         };
     };
 };
