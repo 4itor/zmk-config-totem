@@ -22,6 +22,11 @@
 #define TVP1 4
 #define TVP2 5
 
+&mt {
+    tapping-term-ms = <190>;
+    flavor = "tap-unless-interrupted";
+};
+
 / {
     behaviors {
         ht: hold_tap {
