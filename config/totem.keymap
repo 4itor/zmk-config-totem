@@ -67,13 +67,23 @@
         compatible = "zmk,conditional-layers";
 
         Adjustment_Layer {
-            if-layers = <1 2>;
-            then-layer = <5>;
+            if-layers = <2 4>;
+            then-layer = <8>;
         };
 
-        Connectivity_Layer {
-            if-layers = <1 4>;
-            then-layer = <6>;
+        Adjustment_Mac {
+            if-layers = <3 4>;
+            then-layer = <9>;
+        };
+
+        Connection_Layter {
+            if-layers = <2 6>;
+            then-layer = <10>;
+        };
+
+        Connection_Mac {
+            if-layers = <3 7>;
+            then-layer = <10>;
         };
     };
 
@@ -138,15 +148,15 @@
         };
 
         combo_gaming {
-            bindings = <&to 7>;
+            bindings = <&to 11>;
             key-positions = <30 31>;
-            layers = <6>;
+            layers = <10>;
         };
 
         combo_gaming_exit {
             bindings = <&to 0>;
             key-positions = <30 31>;
-            layers = <8>;
+            layers = <12>;
         };
     };
 
@@ -155,10 +165,10 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        MacOS {
+        Windows {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "MacOS";
+            label = "Windows";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -175,15 +185,22 @@
        &kp Q       &kp W       &kp E        &kp R        &kp T              &kp Y        &kp U        &kp I        &kp O       &kp P
        &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G              &kp H        &mt RSHFT J  &mt RCTRL K  &mt LALT L  &mt RGUI SEMI
 &kp Q  &kp Z       &kp X       &kp C        &kp V        &kp B              &kp N        &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp P
-                               &none        &lt 1 TAB    &lt 4 BACKSPACE    &lt 3 SPACE  &lt 2 RET    &none
+                               &none        &lt 2 TAB    &lt 6 BACKSPACE    &lt 5 SPACE  &lt 4 RET    &none
+            >;
+        };
+
+        MacOS {
+            label = "MacOS";
+            bindings = <
+       &kp Q       &kp W       &kp E        &kp R        &kp T              &kp Y        &kp U        &kp I        &kp O       &kp P
+       &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G              &kp H        &mt RSHFT J  &mt RCTRL K  &mt LALT L  &mt RGUI SEMI
+&kp Q  &kp Z       &kp X       &kp C        &kp V        &kp B              &kp N        &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp P
+                               &none        &lt 3 TAB    &lt 7 BACKSPACE    &lt 5 SPACE  &lt 4 RET    &none
             >;
         };
 
         Numpad {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "Numpad";
-
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
             //             ┃           ┃           ┃     UP    ┃           ┃     {     ┃   ┃     }     ┃     7     ┃     8     ┃     9     ┃     +     ┃
@@ -199,7 +216,17 @@
          &kp ESC   &none     &kp LC(LA(F1))    &kp LA(LS(F))  &kp LEFT_PARENTHESIS    &kp RPAR    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
          &kp LGUI  &kp LALT  &kp LEFT_CONTROL  &kp LSHFT      &kp KP_PLUS             &kp PERIOD  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SEMI
 &kp ESC  &none     &none     &none             &none          &kp KP_MINUS            &kp COMMA   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH     &kp N0
-                             &trans            &trans         &trans                  &trans      &trans        &trans
+                             &trans            &trans         &lt 6 BSPC              &trans      &trans        &trans
+            >;
+        };
+
+        Mac_Numpad {
+            label = "Numpad";
+            bindings = <
+         &kp ESC   &none     &none             &none      &kp LEFT_PARENTHESIS    &kp RPAR    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+         &kp LGUI  &kp LALT  &kp LEFT_CONTROL  &kp LSHFT  &kp KP_PLUS             &kp PERIOD  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SEMI
+&kp ESC  &none     &none     &none             &none      &kp KP_MINUS            &kp COMMA   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH     &kp N0
+                             &trans            &trans     &lt 7 BSPC              &trans      &trans        &trans
             >;
         };
 
@@ -253,9 +280,6 @@
 
         FKeys {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "FKS";
-
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
             //             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃           ┃   ┃           ┃    F7     ┃    F8     ┃    F9     ┃    F12    ┃
@@ -268,18 +292,25 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp LG(Q)  &kp LG(W)  &kp LS(TAB)  &swap           &tabswap        &none   &kp F7  &kp F8  &kp F9   &kp F10
-           &kp LGUI   &kp LALT   &kp LCTRL    &kp LEFT_SHIFT  &kp LA(LEFT)    &none   &kp F4  &kp F5  &kp F6   &kp F11
-&kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)    &kp LA(RIGHT)   &none           &kp F1  &kp F2  &kp F3  &kp F12  &none    &trans
-                                 &trans       &trans          &trans          &trans  &trans
+       &kp LG(Q)  &kp LG(W)  &kp LS(TAB)  &swap           &tabswap     &none   &kp F7  &kp F8  &kp F9   &kp F10
+       &kp LGUI   &kp LALT   &kp LCTRL    &kp LEFT_SHIFT  &none        &none   &kp F4  &kp F5  &kp F6   &kp F11
+&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)    &kp LG(V)       &kp LG(A)    &none   &kp F1  &kp F2  &kp F12  &kp F12  &none
+                             &trans       &lt 2 TAB       &trans       &trans  &trans
             >;
         };
 
-        Adjustments {
+        Mac_Fkeys {
+            label = "FKeys";
+            bindings = <
+       &kp LG(Q)  &kp LG(W)  &kp LS(TAB)  &swap           &tabswap     &none   &kp F7  &kp F8  &kp F9  &kp F10
+       &kp LGUI   &kp LALT   &kp LCTRL    &kp LEFT_SHIFT  &none        &none   &kp F4  &kp F5  &kp F6  &kp F11
+&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)    &kp LG(V)       &kp LG(A)    &none   &kp F1  &kp F2  &kp F3  &kp F12  &none
+                             &trans       &lt 3 TAB       &trans       &trans  &trans
+            >;
+        };
+
+        Adjust {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "ADJ";
-
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
             //             ┃ SOLO      ┃ TOGGLE IN ┃ RESET ROT ┃ TOGGLE OUT┃ TAKE SNAP ┃   ┃           ┃           ┃           ┃           ┃           ┃
@@ -292,10 +323,20 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LC(LA(LS(LG(Q))))  &none                  &kp LC(MINUS)  &kp LC(EQUAL)  &kp LC(N0)    &kp C_PLAY        &kp C_PREV            &kp C_NEXT            &kp RG(NUMBER_4)            &kp RG(N5)
-        &kp LS(LG(LA(LC(A))))  &kp LS(LA(LG(LC(S))))  &none          &none          &none         &kp C_MUTE        &kp C_VOL_DN          &kp C_VOLUME_UP       &m_license                  &kp LS(LG(LC(LA(SEMICOLON))))
-&trans  &none                  &none                  &none          &none          &none         &kp RG(NUMBER_6)  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LS(LA(LC(LG(PERIOD))))  &kp LA(LC(DEL))                &none
-                                                      &trans         &trans         &trans        &trans            &trans                &trans
+        &kp LC(LA(LS(LG(Q))))  &none                  &kp LC(MINUS)          &kp LC(EQUAL)          &kp LC(N0)               &kp C_PLAY        &kp C_PREV            &kp C_NEXT            &kp RG(NUMBER_4)            &kp RG(N5)
+        &kp LS(LG(LA(LC(A))))  &kp LS(LA(LG(LC(S))))  &kp LG(LA(LS(LC(D))))  &kp LS(LC(LG(LA(F))))  &kp LS(LA(LC(LG(G))))    &kp C_MUTE        &kp C_VOL_DN          &kp C_VOLUME_UP       &m_license                  &kp LS(LG(LC(LA(SEMICOLON))))
+&trans  &kp LS(LA(LC(LG(Z))))  &kp LS(LA(LC(LG(X))))  &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(V))))  &kp LS(LA(LC(LG(B))))    &kp RG(NUMBER_6)  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LS(LA(LC(LG(PERIOD))))  &kp LA(LC(DEL))                &none
+                                                      &trans                 &trans                 &trans                   &trans            &trans                &trans
+            >;
+        };
+
+        Mac_Adjust {
+            label = "Adjust";
+            bindings = <
+        &none                 &none           &kp LG(MINUS)   &kp LG(EQUAL)  &kp LG(N0)    &kp C_PLAY        &kp C_PREV            &kp C_NEXT            &kp RG(NUMBER_4)            &kp RG(N5)
+        &kp LS(LG(NUMBER_3))  &kp LS(LG(N4))  &kp LG(LS(N5))  &none          &none         &kp C_MUTE        &kp C_VOL_DN          &kp C_VOLUME_UP       &m_license                  &kp LS(LG(LC(LA(SEMICOLON))))
+&trans  &none                 &none           &none           &none          &none         &kp RG(NUMBER_6)  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LS(LA(LC(LG(PERIOD))))  &kp LA(LC(DEL))                &none
+                                              &trans          &trans         &trans        &trans            &trans                &trans
             >;
         };
 
@@ -307,15 +348,15 @@
                            &none  &trans  &trans            &none         &none         &none
             >;
 
-            label = "CON";
+            label = "Connect";
         };
 
         Gaming {
             bindings = <
-         &kp TAB    &kp Q  &kp E   &kp R  &kp T        &kp Y     &kp U     &kp I     &kp O  &kp P
-         &kp LSHFT  &kp A  &kp W   &kp D  &kp F        &kp G     &kp H     &kp J     &kp K  &kp L
-&kp ESC  &kp LALT   &kp Z  &kp S   &kp X  &kp C        &kp V     &kp B     &kp N     &kp M  &kp COMMA  &kp DOT
-                           &trans  &mo 8  &kp SPACE    &kp FSLH  &kp SEMI  &kp APOS
+         &kp TAB    &kp Q  &kp E   &kp R   &kp T        &kp Y     &kp U     &kp I     &kp O  &kp P
+         &kp LSHFT  &kp A  &kp W   &kp D   &kp F        &kp G     &kp H     &kp J     &kp K  &kp L
+&kp ESC  &kp LALT   &kp Z  &kp S   &kp X   &kp C        &kp V     &kp B     &kp N     &kp M  &kp COMMA  &kp DOT
+                           &trans  &mo 12  &kp SPACE    &kp FSLH  &kp SEMI  &kp APOS
             >;
 
             label = "Gaming";
