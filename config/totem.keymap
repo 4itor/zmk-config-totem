@@ -249,7 +249,7 @@
         };
 
         Numpad {
-            display_name = "Numpad"
+            display_name = "Numpad";
             bindings = <
          &kp ESC   &none     &kp LC(LA(F1))    &kp LA(LS(F))  &kp LEFT_PARENTHESIS    &kp RPAR    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
          &kp LGUI  &kp LALT  &kp LEFT_CONTROL  &kp LSHFT      &kp KP_PLUS             &kp PERIOD  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SEMI
