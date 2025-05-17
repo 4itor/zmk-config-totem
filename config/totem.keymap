@@ -30,33 +30,50 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <6 7>;
-            bindings = <&kp ESC>;
+    behaviors {
+        ht: hold_tap {
+            label = "hold_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
         };
 
-        combo_esc2 {
-            bindings = <&kp ESCAPE>;
-            key-positions = <2 3>;
+        swap: swapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+
+            ignored-key-positions = <0 1 2>;
+            ignored-layers = <1>;
         };
 
-        combo_meet_mute {
-            bindings = <&kp LC(D)>;
-            key-positions = <27 28>;
+        tabswap: tswapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "TSWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
+
+            ignored-key-positions = <2>;
+            ignored-layers = <1>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        Adjustment_Layer {
+            if-layers = <1 2>;
+            then-layer = <5>;
         };
 
-        combo_meet_cam {
-            bindings = <&kp LC(E)>;
-            key-positions = <28 29>;
-        };
-
-        combo_caps_word {
-            bindings = <&caps_word>;
-            key-positions = <13 16>;
+        Connectivity_Layer {
+            if-layers = <1 4>;
+            then-layer = <6>;
         };
     };
 
@@ -86,50 +103,37 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(H) &kp L>, <&macro_wait_time 500>, <&kp LA(C)>;
-
             label = "M_LICENSE";
         };
+    };
 
-        m_cut: m_cut {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(X)>;
-            label = "M_CUT";
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp ESC>;
         };
 
-        m_copy: m_copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(C)>;
-            label = "M_COPY";
+        combo_esc2 {
+            bindings = <&kp ESCAPE>;
+            key-positions = <2 3>;
         };
 
-        m_paste: m_paste {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(V)>;
-            label = "M_PASTE";
+        combo_meet_mute {
+            bindings = <&kp LC(D)>;
+            key-positions = <27 28>;
         };
 
-        m_select: m_select {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(A)>;
-            label = "M_SELECT";
+        combo_meet_cam {
+            bindings = <&kp LC(E)>;
+            key-positions = <28 29>;
         };
 
-        m_undo: m_undo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(Z)>;
-            label = "M_UNDO";
-        };
-
-        m_lock: m_lock {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LC(Q))>;
-            label = "M_LOCK";
+        combo_caps_word {
+            bindings = <&caps_word>;
+            key-positions = <13 16>;
         };
     };
 
@@ -251,9 +255,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp LG(Q)  &kp LG(W)  &kp LA(LS(TAB))  &kp LA(TAB)     &kp F12          &none      &kp F7  &kp F8  &kp F9  &kp F10
+           &kp LG(Q)  &kp LG(W)  &kp LS(TAB)  &swap     &tabswap          &none      &kp F7  &kp F8  &kp F9  &kp F10
            &kp LGUI   &kp LALT   &kp LCTRL        &kp LEFT_SHIFT  &kp LA(LEFT)     &none      &kp F4  &kp F5  &kp F6  &kp F11
-&m_select  &m_undo    &m_cut     &m_copy          &m_paste        &kp LA(RIGHT)    &none      &kp F1  &kp F2  &kp F3  &kp F12  &none
+           &kp LG(Z)  &kp LG(X)  &kp LG(C)        &kp LG(V)       &kp LA(RIGHT)    &none      &kp F1  &kp F2  &kp F3  &kp F12  &none
                                  &trans           &trans          &trans           &kp LA(S)  &trans  &trans
             >;
         };
@@ -291,20 +295,6 @@
             >;
 
             label = "CON";
-        };
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        Adjustment_Layer {
-            if-layers = <1 2>;
-            then-layer = <5>;
-        };
-
-        Connectivity_Layer {
-            if-layers = <1 4>;
-            then-layer = <6>;
         };
     };
 };
