@@ -206,13 +206,13 @@
 
         combo_win_switch {
             bindings = <&to 0>;
-            key-positions = <20 21>;
+            key-positions = <21 0>;
             timeout-ms = <30>;
         };
 
         combo_mac_switch {
             bindings = <&to 1>;
-            key-positions = <31 30>;
+            key-positions = <30 9>;
             timeout-ms = <30>;
         };
     };
