@@ -234,16 +234,19 @@
         combo_dongle_bootloader {
             bindings = <&bootloader>;
             key-positions = <21 22>;
+            layers = <10>;
         };
 
         combo_ble_clear {
             bindings = <&bt BT_CLR>;
             key-positions = <5 6>;
+            layers = <10>;
         };
 
         combo_ble_clear_all {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <9 5>;
+            layers = <10>;
         };
     };
 
