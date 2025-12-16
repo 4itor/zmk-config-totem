@@ -230,6 +230,21 @@
             timeout-ms = <30>;
             layers = <0 1>;
         };
+
+        combo_dongle_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <21 22>;
+        };
+
+        combo_ble_clear {
+            bindings = <&bt BT_CLR>;
+            key-positions = <5 6>;
+        };
+
+        combo_ble_clear_all {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <9 5>;
+        };
     };
 
     keymap {
@@ -238,10 +253,10 @@
         Windows {
             label = "Windows";
             bindings = <
-       &kp Q       &kp W       &kp E        &kp R        &kp T              &kp Y        &kp U        &kp I        &kp O       &kp P
-       &pht LGUI A &ht LALT S  &ht LCTRL D  &ht LSHFT F  &kp G              &kp H        &ht RSHFT J  &ht RCTRL K  &ht LALT L  &pht RGUI SEMI
-&none  &kp Z       &kp X       &kp C        &kp V        &kp B              &kp N        &kp M        &kp COMMA    &kp DOT     &kp FSLH       &none
-                               &none        &lt 2 TAB    &lt 6 BACKSPACE    &lt 5 SPACE  &lt 4 RET    &none
+       &kp Q        &kp W       &kp E        &kp R        &kp T              &kp Y        &kp U        &kp I        &kp O       &kp P
+       &pht LGUI A  &ht LALT S  &ht LCTRL D  &ht LSHFT F  &kp G              &kp H        &ht RSHFT J  &ht RCTRL K  &ht LALT L  &pht RGUI SEMI
+&none  &kp Z        &kp X       &kp C        &kp V        &kp B              &kp N        &kp M        &kp COMMA    &kp DOT     &kp FSLH        &none
+                                &none        &lt 2 TAB    &lt 6 BACKSPACE    &lt 5 SPACE  &lt 4 RET    &none
             >;
         };
 
@@ -249,10 +264,10 @@
             label = "MacOS";
             display-name = "Mac OS";
             bindings = <
-       &kp Q       &kp W       &kp E        &kp R        &kp T              &kp Y        &kp U        &kp I        &kp O       &kp P
-       &pht LGUI A &ht LALT S  &ht LCTRL D  &ht LSHFT F  &kp G              &kp H        &ht RSHFT J  &ht RCTRL K  &ht LALT L  &pht RGUI SEMI
-&none  &kp Z       &kp X       &kp C        &kp V        &kp B              &kp N        &kp M        &kp COMMA    &kp DOT     &kp FSLH       &none
-                               &none        &lt 3 TAB    &lt 7 BACKSPACE    &lt 5 SPACE  &lt 4 RET    &none
+       &kp Q        &kp W       &kp E        &kp R        &kp T              &kp Y        &kp U        &kp I        &kp O       &kp P
+       &pht LGUI A  &ht LALT S  &ht LCTRL D  &ht LSHFT F  &kp G              &kp H        &ht RSHFT J  &ht RCTRL K  &ht LALT L  &pht RGUI SEMI
+&none  &kp Z        &kp X       &kp C        &kp V        &kp B              &kp N        &kp M        &kp COMMA    &kp DOT     &kp FSLH        &none
+                                &none        &lt 3 TAB    &lt 7 BACKSPACE    &lt 5 SPACE  &lt 4 RET    &none
             >;
         };
 
@@ -343,10 +358,10 @@
             label = "Connect";
             display-name = "Connect";
             bindings = <
-       &bootloader  &none  &none  &none   &out OUT_TOG      &bt BT_CLR    &none         &none         &none         &bootloader
-       &none        &none  &none  &none   &none             &none         &none         &none         &none         &none
-&none  &none        &none  &none  &none   &studio_unlock    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
-                           &none  &trans  &trans            &none         &none         &none
+       &bootloader     &none  &none  &none    &out OUT_USB    &out OUT_BLE  &none         &none         &none         &bootloader
+       &none           &none  &none  &none    &none           &none         &none         &none         &none         &none
+&none  &studio_unlock  &none  &none  &kp F23  &kp F24         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
+                              &none  &trans   &trans          &none         &none         &none
             >;
         };
 
