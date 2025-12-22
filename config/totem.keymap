@@ -58,6 +58,21 @@
             ignored-key-positions = <2>;
             ignored-layers = <1>;
         };
+
+        tdlw: tap_dance_lock_windows {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&none>, <&none>, <&kp none>;
+        };
+
+        tdlm: tap_dance_lock_windows {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&none>, <&none>, <&kp none>;
+        };
+
     };
 
     conditional_layers {
