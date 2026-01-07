@@ -275,6 +275,18 @@
             key-positions = <16 17>;
             layers = <0 1>;
         };
+
+        combo_bc_inspect {
+            bindings = <&kp LS(LA(F1))>;
+            key-positions = <4 5>;
+            layers = <0>;
+        };
+
+        combo_chrome_devel {
+            bindings = <&kp LC(LS(I))>;
+            key-positions = <25 26>;
+            layers = <0>;
+        };
     };
 
     keymap {
