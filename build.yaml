@@ -1,20 +1,35 @@
 include:
+  # left side
   - board: seeeduino_xiao_ble
     shield: totem_left
     artifact-name: totem_left
+  # left side rgbled
+  - board: seeeduino_xiao_ble
+    shield: totem_left rgbled_adapter
+    cmake-args: -DCONFIG_RGBLED_WIDGET_BATTERY_SHOW_SELF=y
+    artifact-name: totem_left_rgbled
+  # right side
   - board: seeeduino_xiao_ble
     shield: totem_right
     artifact-name: totem_right
+  # right side rgbled
+  - board: seeeduino_xiao_ble
+    shield: totem_right rgbled_adapter
+    cmake-args: -DCONFIG_RGBLED_WIDGET_BATTERY_SHOW_SELF=y
+    artifact-name: totem_right_rgbled
+  # dongle prospector
   - board: seeeduino_xiao_ble
     shield: totem_dongle prospector_adapter
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: totem_dongle_prospector
+  # dongle rgbled
   - board: seeeduino_xiao_ble
     shield: totem_dongle rgbled_adapter
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: totem_dongle_rgbled
+  # settings reset
   - board: seeeduino_xiao_ble
     shield: settings_reset
-    artifact-name: xiao_settings_reset
+    artifact-name: xiao_ble_settings_reset
