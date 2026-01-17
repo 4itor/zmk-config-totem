@@ -19,9 +19,9 @@ include:
     artifact-name: totem_right_rgbled
   # dongle prospector
   - board: seeeduino_xiao_ble
-    shield: totem_dongle prospector_adapter
+    shield: totem_dongle dongle_screen
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_DONGLE_SCREEN_IDLE_TIMEOUT_S=1800 -DCONFIG_DONGLE_SCREEN_MAX_BRIGHTNESS=10
     artifact-name: totem_dongle_prospector
   # dongle rgbled
   - board: seeeduino_xiao_ble

@@ -3,9 +3,9 @@ manifest:
     # zmk official
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Prospector
-    - name: carrefinho
-      url-base: https://github.com/carrefinho
+    # ZMK Dongle Screen
+    - name: janpfischer
+      url-base: https://github.com/janpfischer
     # ZMK tri-state
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
