@@ -3,6 +3,9 @@ manifest:
     # zmk official
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    # Prospector module
+    #- name: carrefinho
+    #  url-base: https://github.com/carrefinho
     # ZMK Dongle Screen
     - name: janpfischer
       url-base: https://github.com/janpfischer
@@ -17,14 +20,17 @@ manifest:
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
-    - name: prospector-zmk-module
-      remote: carrefinho
-      revision: main
+    #- name: prospector-zmk-module
+    #  remote: carrefinho
+    #  revision: main
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
+      revision: main
+    - name: zmk-dongle-screen
+      remote: janpfischer
       revision: main
   self:
     path: config
