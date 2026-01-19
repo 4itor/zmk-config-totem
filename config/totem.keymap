@@ -277,7 +277,7 @@
         };
 
         combo_bc_inspect {
-            bindings = <&kp LS(LA(F1))>;
+            bindings = <&kp LA(LC(F1))>;
             key-positions = <4 5>;
             layers = <0>;
         };
