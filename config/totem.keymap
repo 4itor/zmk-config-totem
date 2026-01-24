@@ -137,12 +137,14 @@
             key-positions = <2 3>;
             bindings = <&kp ESC>;
             timeout-ms = <30>;
+            layers = <0 1>;
         };
 
         combo_esc_right {
             bindings = <&kp ESCAPE>;
             key-positions = <6 7>;
             timeout-ms = <30>;
+            layers = <0 1>;
         };
 
         combo_meet_mute {
@@ -155,12 +157,14 @@
             bindings = <&kp LC(E)>;
             key-positions = <28 29>;
             timeout-ms = <30>;
+            layers = <0>;
         };
 
         combo_caps_word {
             bindings = <&caps_word>;
             key-positions = <13 16>;
             timeout-ms = <30>;
+            layers = <0 1>;
         };
 
         combo_gaming {
@@ -360,7 +364,7 @@
        &kp LC(Q)  &kp LC(W)  &kp LS(TAB)  &swap           &tabswap     &none   &kp F7  &kp F8  &kp F9  &kp F10
        &kp LGUI   &kp LALT   &kp LCTRL    &kp LEFT_SHIFT  &none        &none   &kp F4  &kp F5  &kp F6  &kp F11
 &none  &kp LC(Z)  &kp LC(X)  &kp LC(C)    &kp LC(V)       &kp LC(A)    &none   &kp F1  &kp F2  &kp F3  &kp F12  &none
-                             &trans       &lt 2 TAB       &trans       &trans  &trans &trans
+                             &trans       &lt 2 TAB       &trans       &trans  &trans  &trans
             >;
         };
 
@@ -371,7 +375,7 @@
        &kp LG(Q)  &kp LG(W)  &kp LS(TAB)  &swap           &tabswap     &none   &kp F7  &kp F8  &kp F9  &kp F10
        &kp LGUI   &kp LALT   &kp LCTRL    &kp LEFT_SHIFT  &none        &none   &kp F4  &kp F5  &kp F6  &kp F11
 &none  &kp LG(Z)  &kp LG(X)  &kp LG(C)    &kp LG(V)       &kp LG(A)    &none   &kp F1  &kp F2  &kp F3  &kp F12  &none
-                             &trans       &lt 3 TAB       &trans       &trans  &trans &trans
+                             &trans       &lt 3 TAB       &trans       &trans  &trans  &trans
             >;
         };
 
