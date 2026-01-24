@@ -151,6 +151,7 @@
             bindings = <&kp LC(D)>;
             key-positions = <27 28>;
             timeout-ms = <30>;
+            layers = <0>;
         };
 
         combo_meet_cam {
@@ -199,6 +200,7 @@
             bindings = <&kp LC(V)>;
             key-positions = <23 24>;
             timeout-ms = <30>;
+            layers = <0>;
         };
 
         combo_select_all_win {
