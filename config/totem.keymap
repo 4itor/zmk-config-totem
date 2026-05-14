@@ -353,10 +353,10 @@
             label = "Navigate";
             display-name = "Navigate";
             bindings = <
-       &kp RA(SEMICOLON)      &kp RA(GRAVE)  &kp RA(SQT)  &kp RA(NUMBER_6)       &kp RS(RA(SQT))     &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &none
-       &kp LGUI               &kp LALT       &kp LCTRL    &kp LSHFT              &kp RA(NUMBER_1)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none
-&none  &kp RS(RA(SEMICOLON))  &kp RS(RA(C))  &kp RA(C)    &kp LS(LA(GRAVE))      &kp RA(SLASH)       &none     &none          &none         &none      &none  &none
-                                             &trans       &kp LC(LA(LG(SPACE)))  &kp DEL             &trans    &trans         &trans
+       &kp RA(SEMICOLON)      &kp RA(GRAVE)  &kp RA(SQT)  &kp RA(NUMBER_6)       &kp RS(RA(SQT))     &kp HOME   &kp PAGE_DOWN  &kp PG_UP     &kp END    &none
+       &kp LGUI               &kp LALT       &kp LCTRL    &kp LSHFT              &kp RA(NUMBER_1)    &kp LEFT   &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none
+&none  &kp RS(RA(SEMICOLON))  &kp RS(RA(C))  &kp RA(C)    &kp LS(LA(GRAVE))      &kp RA(SLASH)       &kp RA(N)  &kp RA(RS(N))  &none         &none      &none  &none
+                                             &trans       &kp LC(LA(LG(SPACE)))  &kp DEL             &trans     &trans         &trans
             >;
         };
 
