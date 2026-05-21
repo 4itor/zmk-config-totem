@@ -15,6 +15,9 @@ manifest:
     # RGB Led
     - name: caksoylar
       url-base: https://github.com/caksoylar
+    # dongle_screen
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -32,5 +35,8 @@ manifest:
     - name: zmk-dongle-screen
       remote: janpfischer
       revision: main
+    - name: zmk-dongle-display
+      remote: englmaxi
+      revision: v0.3
   self:
     path: config
