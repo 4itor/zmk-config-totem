@@ -7,17 +7,17 @@ manifest:
     #- name: carrefinho
     #  url-base: https://github.com/carrefinho
     # ZMK Dongle Screen
-    - name: janpfischer
-      url-base: https://github.com/janpfischer
+    #- name: janpfischer
+    #  url-base: https://github.com/janpfischer
     # ZMK tri-state
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
     # RGB Led
-    - name: caksoylar
-      url-base: https://github.com/caksoylar
+    #- name: caksoylar
+    #  url-base: https://github.com/caksoylar
     # dongle_screen A
-    #- name: englmaxi
-    #  url-base: https://github.com/englmaxi
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
     #- name: tokyo2006
     #  url-base: https://github.com/tokyo2006
     # dongle oled
@@ -37,20 +37,20 @@ manifest:
       remote: dhruvinsh
       revision: main
     # RGB Leb
-    - name: zmk-rgbled-widget
-      remote: caksoylar
-      revision: v0.3
-    # Alternate Prospector
-    - name: zmk-dongle-screen
-      remote: janpfischer
-      revision: main
-    # Both for dongle oled screen
-    #- name: prospector-zmk-module                 # <--- and these
-    #  remote: tokyo2006                           # <---
-    #  revision: micro_spi2
-    #- name: zmk-dongle-display
-    #  remote: englmaxi
+    #- name: zmk-rgbled-widget
+    #  remote: caksoylar
     #  revision: v0.3
+    # Alternate Prospector
+    #- name: zmk-dongle-screen
+    #  remote: janpfischer
+    #  revision: main
+    # Both for dongle oled screen
+    - name: prospector-zmk-module                 # <--- and these
+      remote: tokyo2006                           # <---
+      revision: micro_spi2
+    - name: zmk-dongle-display
+      remote: englmaxi
+      revision: v0.3
     # Dongle Oled
     #- name: zmk-oled-adapter
     #  remote: mctechnology17
