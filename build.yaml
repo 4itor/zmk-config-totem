@@ -30,7 +30,7 @@ include:
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: totem_dongle_rgbled
   # dongle nice_nano_v2 + screen
-  - board: nice_nano_v2
+  - board: seeeduino_xiao_ble
     shield: totem_dongle dongle_display
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_DONGLE_DISPLAY=y
