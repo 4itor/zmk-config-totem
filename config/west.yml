@@ -34,15 +34,15 @@ manifest:
     #- name: prospector-zmk-module
     #  remote: carrefinho
     #  revision: main
-    #- name: zmk-tri-state
-    #  remote: dhruvinsh
-    #  revision: main
-    #- name: zmk-rgbled-widget
-    #  remote: caksoylar
-    #  revision: v0.3
-    #- name: zmk-dongle-screen
-    #  remote: janpfischer
-    #  revision: main 
+    - name: zmk-tri-state
+      remote: dhruvinsh
+      revision: main
+    - name: zmk-rgbled-widget
+      remote: caksoylar
+      revision: v0.3
+    - name: zmk-dongle-screen
+      remote: janpfischer
+      revision: main 
     # Both for dongle oled screen    
     #- name: prospector-zmk-module                 # <--- and these
     #  remote: tokyo2006                           # <---
