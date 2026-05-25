@@ -20,8 +20,10 @@
     };
 };
 
+/*
 /delete-node/ &default_kscan;   // only required if the dongle uses a
                                 // different board than the peripherals
+*/
 
 &pro_micro_i2c {
     status = "okay";
