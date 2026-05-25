@@ -46,7 +46,7 @@ manifest:
     #  revision: micro_spi2 
     - name: zmk-dongle-display
       remote: englmaxi
-      revision: v0.3
+      revision: main
     # Dongle_screen B
   self:
     path: config
