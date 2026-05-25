@@ -39,7 +39,7 @@ manifest:
     # RGB Leb
     - name: zmk-rgbled-widget
       remote: caksoylar
-       revision: v0.3
+      revision: v0.3
     # Alternate Prospector
     #- name: zmk-dongle-screen
     #  remote: janpfischer
