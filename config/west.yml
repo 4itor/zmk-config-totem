@@ -18,7 +18,6 @@ manifest:
     # dongle_screen A
     - name: englmaxi
       url-base: https://github.com/englmaxi
-      revision: v0.3
     #- name: tokyo2006
     #  url-base: https://github.com/tokyo2006
     # dongle_screen B
@@ -32,15 +31,19 @@ manifest:
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
+    # Default Prospector
     #- name: prospector-zmk-module
     #  remote: carrefinho
     #  revision: main
+    # ZMK Tri-State
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
+    # RGB Leb
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: v0.3
+    # Alternate Prospector
     - name: zmk-dongle-screen
       remote: janpfischer
       revision: v0.3
@@ -48,9 +51,9 @@ manifest:
     #- name: prospector-zmk-module                 # <--- and these
     #  remote: tokyo2006                           # <---
     #  revision: micro_spi2
-    #- name: zmk-dongle-display
-    #  remote: englmaxi
-    #  revision: v0.3
+    - name: zmk-dongle-display
+      remote: englmaxi
+      revision: v0.3
     # Dongle_screen B
     # ...
     # Dongle Oled
