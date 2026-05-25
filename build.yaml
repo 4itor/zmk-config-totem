@@ -33,7 +33,7 @@ include:
   - board: seeeduino_xiao_ble
     shield: totem_dongle dongle_display
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_DONGLE_DISPLAY=y -DCONFIG_ZMK_DISPLAY=y
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_DISPLAY=y
     artifact-name: totem_dongle_nice_nano_v2_screen
   # settings reset
   - board: seeeduino_xiao_ble
