@@ -42,7 +42,7 @@ manifest:
       revision: v0.3
     - name: zmk-dongle-screen
       remote: janpfischer
-      revision: main 
+      revision: v0.3
     # Both for dongle oled screen    
     #- name: prospector-zmk-module                 # <--- and these
     #  remote: tokyo2006                           # <---
