@@ -9,6 +9,7 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
+        zephyr,display = &display;
         wakeup-source;
     };
 
@@ -18,6 +19,10 @@
         rows = <0>;
         events = <0>;
     };
+};
+
+&display {
+    status = "okay";
 };
 
 /*
