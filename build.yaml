@@ -1,22 +1,22 @@
 include:
   # left side
-  - board: seeeduino_xiao_ble
-    shield: totem_left
-    artifact-name: totem_left
+  #- board: seeeduino_xiao_ble
+  #  shield: totem_left
+  #  artifact-name: totem_left
   # left side rgbled
-  #- board: seeeduino_xiao_ble
-  #  shield: totem_left rgbled_adapter
-  #  cmake-args: -DCONFIG_RGBLED_WIDGET_BATTERY_SHOW_SELF=y
-  #  artifact-name: totem_left_rgbled
-  # right side
   - board: seeeduino_xiao_ble
-    shield: totem_right
-    artifact-name: totem_right
-  # right side rgbled
+    shield: totem_left rgbled_adapter
+    cmake-args: -DCONFIG_RGBLED_WIDGET_BATTERY_SHOW_SELF=y
+    artifact-name: totem_left_rgbled
+  # right side
   #- board: seeeduino_xiao_ble
-  #  shield: totem_right rgbled_adapter
-  #  cmake-args: -DCONFIG_RGBLED_WIDGET_BATTERY_SHOW_SELF=y
-  #  artifact-name: totem_right_rgbled
+  #  shield: totem_right
+  #  artifact-name: totem_right
+  # right side rgbled
+  - board: seeeduino_xiao_ble
+    shield: totem_right rgbled_adapter
+    cmake-args: -DCONFIG_RGBLED_WIDGET_BATTERY_SHOW_SELF=y
+    artifact-name: totem_right_rgbled
   # dongle xiao + prospector
   #- board: seeeduino_xiao_ble
   #  shield: totem_dongle dongle_screen
@@ -34,7 +34,7 @@ include:
     shield: totem_dongle dongle_display #oled_adapter_pro_micro_128x64
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_DISPLAY=y
-    artifact-name: totem_dongle_nice_nano_v2_screen
+    artifact-name: totem_dongle_nice_nano_v2_oled
   # settings reset
   - board: seeeduino_xiao_ble
     shield: settings_reset

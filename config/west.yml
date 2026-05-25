@@ -13,8 +13,8 @@ manifest:
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
     # RGB Led
-    #- name: caksoylar
-    #  url-base: https://github.com/caksoylar
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
     # dongle_screen A
     - name: englmaxi
       url-base: https://github.com/englmaxi
@@ -37,9 +37,9 @@ manifest:
       remote: dhruvinsh
       revision: main
     # RGB Leb
-    #- name: zmk-rgbled-widget
-    #  remote: caksoylar
-    #  revision: v0.3
+    - name: zmk-rgbled-widget
+      remote: caksoylar
+       revision: v0.3
     # Alternate Prospector
     #- name: zmk-dongle-screen
     #  remote: janpfischer
