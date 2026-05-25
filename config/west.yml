@@ -18,8 +18,8 @@ manifest:
     # dongle_screen A
     - name: englmaxi
       url-base: https://github.com/englmaxi
-    #- name: tokyo2006
-    #  url-base: https://github.com/tokyo2006
+    - name: tokyo2006
+      url-base: https://github.com/tokyo2006
     # dongle oled
     #- name: mctechnology17
     #  url-base: https://github.com/mctechnology17
