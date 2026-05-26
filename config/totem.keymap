@@ -133,8 +133,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap_time 25>,
-                <&macro_wait_time 25>,
+                <&macro_tap_time 50>,
+                <&macro_wait_time 50>,
                 <&kp LALT &kp LCTRL &kp LSHFT &kp RSHFT &kp RCTRL &kp RALT>;
 
             label = "M_RESMODS";
