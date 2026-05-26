@@ -63,14 +63,14 @@
         tdlw: tap_dance_lock_windows {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp RC(LA(RG(RIGHT_SHIFT)))>, <&none>, <&kp LG(L)>;
+            tapping-term-ms = <250>;
+            bindings = <&none>, <&none>, <&kp LG(L)>;
         };
 
         tdlm: tap_dance_lock_macos {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp RC(RA(RG(RSHIFT)))>, <&none>, <&kp LC(LG(Q))>;
         };
     };
