@@ -148,6 +148,13 @@
 
             label = "M_RESMODS";
         };
+
+        m_f8_dwn: m_f8_dwn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F8 &kp DOWN>;
+            label = "M_F8_DWN";
+        };
     };
 
     combos {
@@ -385,7 +392,7 @@
             bindings = <
        &kp LC(Q)  &kp LC(W)  &kp LS(TAB)  &swap           &tabswap     &none   &kp F7  &kp F8  &kp F9  &kp F10
        &kp LGUI   &kp LALT   &kp LCTRL    &kp LEFT_SHIFT  &none        &none   &kp F4  &kp F5  &kp F6  &kp F11
-&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)    &kp LC(V)       &kp LC(A)    &none   &kp F1  &kp F2  &kp F3  &kp F12  &none
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)    &kp LC(V)       &kp LC(A)    &none   &kp F1  &kp F2  &kp F3  &kp F12  &m_f8_dwn
                              &trans       &lt 2 TAB       &trans       &trans  &trans  &trans
             >;
         };
