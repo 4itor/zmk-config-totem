@@ -149,11 +149,11 @@
             label = "M_RESMODS";
         };
 
-        m_f8_dwn: m_bcduplicate {
+        m_f8_dwn: m_f8_dwn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp F8 &kp DOWN>;
-            label = "M_BCDUPLICATE";
+            label = "M_F8_DWN";
         };
     };
 
